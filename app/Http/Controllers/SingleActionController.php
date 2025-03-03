@@ -11,6 +11,8 @@ class SingleActionController extends Controller
      */
     public function __invoke(Request $request)
     {
+        //this controller is invokde without specifing method yo invoke
+        //Route::get('/your-route', YourController::class)
         return "This is a single action conroller";
     }
 }

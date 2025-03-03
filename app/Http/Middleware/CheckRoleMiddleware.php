@@ -27,9 +27,6 @@ class CheckRoleMiddleware
 
          return abort(404);
 
-
-
-
         // $user = User::findOrFail($request->user_id);
         // if($user->role == 'admin'){
         //     return $next($request);

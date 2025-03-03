@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Listeners;
+
+use App\Events\PostCreateEvent;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
+
+class PostCreateListener
+{
+    /**
+     * Create the event listener.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the event.
+     */
+    public function handle(PostCreateEvent $event): void
+    {
+        dd($event->name);//$name is passed by constructor in PostCreateEvent
+        dd("LISTENER");
+    }
+}

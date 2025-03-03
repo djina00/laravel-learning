@@ -1,7 +1,12 @@
 <?php
 
+use App\Events\NewMessage;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SampleController;
+use App\Jobs\SendWelcomeEmail;
 use App\Mail\SendMail;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -9,18 +14,58 @@ use Illuminate\Support\Facades\Route;
 
 
 
+
+
+//Dependency Injection
+Route::resource('test', SampleController::class);
+
+
+
+
+//Broadcasting
+// Route::get('messages', function(){
+//     return view('messages');
+// });
+
+// Route::get('send-message', function(){
+//     event(new NewMessage('Hello World!'));
+
+//     dd('Message sent');
+// });
+
+
+
+
+
+
+//Observers
+//Route::resource('posts', PostController::class);
+
+
+
+
+
+//JOBS
+// Route::get('/send', function(){
+//     $user = User::find();
+
+//     //calling job in background
+//     dispatch(new SendWelcomeEmail($user));
+// });
+
+
+
+
 //EMAIL
 // Route::get('send-mail', function(){
 //     return view('send-mail');
-
-
 // });
 
 // Route::post('send-mail', function(Request $request){
 
 //     // Mail::raw($request->message, function($message) use ($request){
 //     //     $message->to($request->email)->subject('Laravel Test Email 2.')
-//                     //->from('test@gmail.com', 'Test');
+//                     ->from('test@gmail.com', 'Test');
 //     // });
 
 
@@ -38,9 +83,9 @@ use Illuminate\Support\Facades\Route;
 // })->name('send.mail');
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

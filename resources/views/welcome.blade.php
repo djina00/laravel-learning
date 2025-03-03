@@ -17,6 +17,12 @@
     </div>
   </section>
 
+  {{-- Observer --}}
+  <form action="{{ route('posts.store') }}" method="POST">
+    @csrf
+    <button type="submit">Save</button>
+  </form>
+
   @include('gallery')
 
 @endsection

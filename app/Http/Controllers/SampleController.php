@@ -2,20 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\PostCreateEvent;
-use App\Mail\PostCreateMail;
-use App\Models\Post;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
-class PostController extends Controller
+class SampleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return [1,2,3];
     }
 
     /**
@@ -31,20 +27,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //Event and Listeners
-        event(new PostCreateEvent("Jhon Doe"));
-
-
-        //Observer
-        //This is not with the rule of Single Responsibility Class principle from SOLID
-        //For that reason we use Observer
-        // $post = new Post();
-        // $post->title = 'Test tittle';
-        // $post->description = 'Test Description';
-        // $post->save();
-
-        //Mail::to('p@gmail.com')->send(new PostCreateMail());
-        //dd($post);
+        //
     }
 
     /**
