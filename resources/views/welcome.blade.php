@@ -1,4 +1,4 @@
-@extends('app')
+{{-- @extends('app')
 
 @section('contents')
 
@@ -18,14 +18,14 @@
   </section>
 
   {{-- Observer --}}
-  <form action="{{ route('posts.store') }}" method="POST">
+  {{-- <form action="{{ route('posts.store') }}" method="POST">
     @csrf
     <button type="submit">Save</button>
   </form>
 
   @include('gallery')
 
-@endsection
+@endsection --}} 
 
 {{-- @push('scripts')
 <script>
@@ -35,3 +35,19 @@
     })
   </script>
 @endpush --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>{{ __('frontend.welcome') }}</h1>
+
+  <p>{{ __('frontend.welcome.description') }}</p>
+</body>
+</html>

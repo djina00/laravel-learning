@@ -70,20 +70,29 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 
-<!-- 
+
 *Authentication* 
 
 Innstall Laravel Breeze
 
-composer require laravel/breeze --dev
-php artisan breeze:install
-php artisan migrate
-npm install
-npm run build
+## composer require laravel/breeze --dev
+## php artisan breeze:install
+## php artisan migrate
+## npm install
+## npm run build
 
 
 
-FOR ENAIL - mailtrap.io
+*FOR EMAIL* - mailtrap.io
+
+*Localizations* 
+## php artisan lang:publish
+Install folders for localizations, to work with localization we need to publish our assets
 
 
--->
+
+## composer du 
+Autoload files(like composer.json)
+
+## php artisan optimize:clear
+Clearing cache

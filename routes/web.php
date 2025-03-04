@@ -14,6 +14,35 @@ use Illuminate\Support\Facades\Route;
 
 
 
+//Localization
+//locale? "?" mmeans it is optional parameter
+
+// Route::get('/localizations/{locale?}', function(string $locale='en'){
+//     if (! in_array($locale, ['en', 'hi'])) {
+//         abort(404);
+//     }
+ 
+//     return view('localizations');
+// })->name('localizations');
+
+Route::get('/localizations', function(){
+    // if (! in_array(request('locale'), ['en', 'hi'])) {
+    //     abort(404);
+    // }
+
+    app()->setLocale(request('locale'));
+ 
+    return view('localizations');
+})->name('localizations');
+
+
+
+
+
+
+
+
+
 
 
 //Dependency Injection
