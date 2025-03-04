@@ -96,3 +96,13 @@ Autoload files(like composer.json)
 
 ## php artisan optimize:clear
 Clearing cache
+
+
+
+*API*
+
+## php artisan install:api
+install API assets
+
+## php artisan make:controller Api/v1/BlogController
+we have versions of api -v1,v2...

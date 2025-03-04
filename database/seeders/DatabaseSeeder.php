@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Blog2;
 use App\Models\MyBlog;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -14,7 +15,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        MyBlog::factory(10)->create();
+
+        //API exercise
+        Blog2::factory()->count(30)->create();
+
+
+
+
+        ///MyBlog::factory(10)->create();
+
+
 
         // User::factory()->create([
         //     'name' => 'Test User',

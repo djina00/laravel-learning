@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog2;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -11,7 +12,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
